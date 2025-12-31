@@ -1,1 +1,0 @@
-chrome.runtime.onMessage.addListener((s,n,t)=>{if(s.type==="ASK_QUESTION")return fetch("http://localhost:8001/ask",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:s.question})}).then(e=>e.json()).then(e=>{t({success:!0,answer:e.answer})}).catch(e=>{console.error("Background Fetch Error:",e),t({success:!1,error:e.message})}),!0});
