@@ -1,91 +1,49 @@
-# ZigmaNeural AI Knowledge Base – Chrome Extension
-
-This repository contains a Chrome extension that provides an AI-powered knowledge base chatbot for the **ZigmaNeural** website.  
-The chatbot uses **Retrieval-Augmented Generation (RAG)** to answer questions strictly from company documents, services information, and HR policy PDFs—ensuring accurate, non-hallucinated responses.
-
+# ZigmaNeural Assistant: Enterprise RAG Chatbot 🚀
+ZigmaNeural Assistant is an advanced AI knowledge base designed as a Chrome Extension. It leverages **Retrieval-Augmented Generation (RAG)** to provide accurate, document-based responses directly within your browser.
 ---
-
-## 🚀 What This Extension Does
-
-- Adds an AI chatbot sidebar to the ZigmaNeural website
-- Answers questions about:
-  - Company overview
-  - AI services & automation capabilities
-  - Use cases and industries
-  - HR policies (from uploaded PDFs)
-- Uses document-based RAG (not generic internet answers)
-- Designed as an **extension-first project**, easy to install and use
-
+## 🌟 Key Features
+- **Document-Centric AI**: Intelligent responses synthesized exclusively from your company documents.
+- **Enterprise Glass UI**: A professional, dark, minimal interface that integrates seamlessly into any web environment.
+- **Efficiency Optimized**: Powered by Google Gemini 1.5 Flash for rapid response times and high-quality synthesis.
+- **Secure & Private**: Operates using internal document indexing, strictly following enterprise data boundaries.
+- **Zero Infrastructure Costs**: Lightweight architecture that runs without the need for expensive vector databases.
 ---
-
-## 🧠 Tech Stack
-
-- **Chrome Extension (Manifest V3)**
-- **React + TypeScript**
-- **Tailwind CSS**
-- **shadcn/ui components**
-- **FastAPI** (backend)
-- **LangChain + FAISS** for document retrieval
-- **LLM API** for answer generation
-
----
-
-## 📦 How to Download the Extension
-
-1. Click the green **Code** button on this GitHub repository  
-2. Select **Download ZIP**  
-3. Once the ZIP file is downloaded, **unzip/extract** it to a folder on your computer  
-
----
-
-## 🧩 How to Install the Extension in Chrome
-
-1. Open **Google Chrome**
-2. Go to: chrome://extensions
-3. Turn ON **Developer mode** (top-right corner)
-4. Click **Load unpacked**
-5. Select the **unzipped project folder**
-6. The ZigmaNeural AI extension will now appear in your extensions list
-
-✅ At this stage, the chatbot UI will be visible.
-
----
-
-## 💬 How to Use the Chatbot
-
-1. Open the **ZigmaNeural website** in Chrome
-2. Click on **Zigma Chat**, which appears at the bottom-right of the screen
-3. A chatbot sidebar will appear on the page
-4. Ask questions such as:
-- *What is the company’s leave policy?*
-- *What does ZigmaNeural do as a company?*
-- *Which industries does ZigmaNeural serve with its AI solutions?*
-- *What makes ZigmaNeural different from other AI companies?*
-5. The chatbot responds **strictly using the provided documents**
-
----
-
-## 🗂 Backend Setup (Required for AI Answers)
-
-⚠️ **Important:**  
-Installing the extension enables the **chatbot UI only**.  
-To receive **real AI-generated answers**, the backend server must also be running.
-
-The extension sends user questions to a local backend, which performs document retrieval and AI response generation using RAG.
-
-### 1️⃣ Navigate to backend folder
-```bash
-cd rag_backend
-2️⃣ Install backend dependencies
-pip install -r requirements.txt
-
-3️⃣ Start the backend server
-uvicorn app:app --reload
-
-
-The backend will run at:
-
-http://127.0.0.1:8000
-
-
-Once the backend is running, the chatbot will return full AI-powered answers.
+## 🛠️ Technical Setup
+### 1. Backend Deployment (Render)
+The backend engine handles document retrieval and AI synthesis.
+1. **Deployment**: Push the `rag_backend` directory to your GitHub repository.
+2. **Setup on Render**: Create a new **Web Service**.
+   - **Root Directory**: `rag_backend`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app`
+3. **Configuration**: Add `GOOGLE_API_KEY` as an environment variable (from [Google AI Studio](https://aistudio.google.com/)).
+### 2. Frontend Installation (Chrome Extension)
+1. **Build Project**: Navigate to `rar_frontend` and execute:
+   ```bash
+   npm run build
+Load Extension:
+Navigate to chrome://extensions in Google Chrome.
+Toggle Developer Mode on.
+Click Load unpacked and select the rar_frontend/dist folder.
+Network Configuration: Ensure BACKEND_URL in src/background.ts matches your active Render service address.
+📂 Project Structure
+├── rag_backend/
+│   ├── docs/                # Knowledge base source files (PDFs)
+│   ├── app.py               # FastAPI engine & AI logic
+│   ├── ingest.py            # Local document processing script
+│   ├── knowledge_base.json  # Indexed knowledge data
+│   └── requirements.txt     # Service dependencies
+└── rar_frontend/
+    ├── src/                 # React application source
+    ├── dist/                # Production build files
+    └── public/              # Static assets & manifest.json
+📝 Usage Guide
+Knowledge Base: The system comes pre-loaded with official company documents in rag_backend/docs.
+Indexing: To update or verify document indexing, run:
+python ingest.py
+Sync: Push updates to GitHub and reload the extension in Chrome.
+Interaction: Ask context-specific questions such as:
+"What is the ZigmaNeural leave policy?"
+"What are the core services provided by ZigmaNeural?"
+✅ Summary
+Built for the modern enterprise, the ZigmaNeural Assistant transforms static company documents into an interactive goldmine of information, accessible instantly from any browser tab.
