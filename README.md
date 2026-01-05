@@ -8,6 +8,7 @@ ZigmaNeural Assistant is an advanced AI knowledge base designed as a Chrome Exte
 - **Secure & Private**: Operates using internal document indexing, strictly following enterprise data boundaries.
 - **Zero Infrastructure Costs**: Lightweight architecture that runs without the need for expensive vector databases.
 ---
+--**WATCH DEMO VIDEO: https://www.youtube.com/watch?v=m_eIdxon-xI
 ## 🛠️ Technical Setup
 ### 1. Backend Deployment (Render)
 The backend engine handles document retrieval and AI synthesis.
@@ -21,12 +22,12 @@ The backend engine handles document retrieval and AI synthesis.
 1. **Build Project**: Navigate to `rar_frontend` and execute:
    ```bash
    npm run build
-Load Extension:
+## Load Extension:
 Navigate to chrome://extensions in Google Chrome.
 Toggle Developer Mode on.
 Click Load unpacked and select the rar_frontend/dist folder.
 Network Configuration: Ensure BACKEND_URL in src/background.ts matches your active Render service address.
-📂 Project Structure
+##📂 Project Structure
 ├── rag_backend/
 │   ├── docs/                # Knowledge base source files (PDFs)
 │   ├── app.py               # FastAPI engine & AI logic
@@ -37,13 +38,13 @@ Network Configuration: Ensure BACKEND_URL in src/background.ts matches your acti
     ├── src/                 # React application source
     ├── dist/                # Production build files
     └── public/              # Static assets & manifest.json
-📝 Usage Guide
-Knowledge Base: The system comes pre-loaded with official company documents in rag_backend/docs.
-Indexing: To update or verify document indexing, run:
+##📝 Usage Guide
+##Knowledge Base: The system comes pre-loaded with official company documents in rag_backend/docs.
+##Indexing: To update or verify document indexing, run:
 python ingest.py
-Sync: Push updates to GitHub and reload the extension in Chrome.
-Interaction: Ask context-specific questions such as:
+##Sync: Push updates to GitHub and reload the extension in Chrome.
+##Interaction: Ask context-specific questions such as:
 "What is the ZigmaNeural leave policy?"
 "What are the core services provided by ZigmaNeural?"
-✅ Summary
+##✅ Summary
 Built for the modern enterprise, the ZigmaNeural Assistant transforms static company documents into an interactive goldmine of information, accessible instantly from any browser tab.
