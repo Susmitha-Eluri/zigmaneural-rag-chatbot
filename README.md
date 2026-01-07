@@ -40,9 +40,8 @@ The ZigmaNeural Assistant follows a **B2B SaaS (Software as a Service)** model:
 
 ## 🎥 Demo Video
 
-[Click here to watch the ZigmaNeural Assistant in action!](https://your-demo-video-link.com) 
-*(Please replace with your actual Loom or YouTube link)*
-
+[Click here to watch the ZigmaNeural Assistant in action!]https://www.youtube.com/watch?v=m_eIdxon-xI
 ---
 
 *Note: The backend is permanently hosted on Railway, so the extension works immediately upon installation.*
+
