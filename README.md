@@ -38,10 +38,24 @@ The ZigmaNeural Assistant follows a **B2B SaaS (Software as a Service)** model:
 
 ---
 
+## Sample Questions
+
+Company basics
+
+- What certifications does ZigmaNeural have (for example ISO)?
+- Which industries does ZigmaNeural serve with its AI solutions?
+- What certifications does ZigmaNeural have (ISO, quality standards, etc.)?
+- What makes ZigmaNeural different from other AI companies?
+- What are some typical use cases of ZigmaNeural’s AI automation in e‑commerce/healthcare/finance/etc.?
+- How does ZigmaNeural use NLP and conversational AI for customer suppor
+  
+-----
+
 ## 🎥 Demo Video
 
 [Click here to watch the ZigmaNeural Assistant in action!]https://www.youtube.com/watch?v=m_eIdxon-xI
 ---
 
-*Note: The backend is permanently hosted on Railway, so the extension works immediately upon installation.*
+
+
 
