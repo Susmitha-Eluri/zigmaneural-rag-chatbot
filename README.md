@@ -41,7 +41,7 @@ The ZigmaNeural Assistant follows a **B2B SaaS (Software as a Service)** model:
 ## Sample Questions
 
 Company basics
-
+- What is ZigmaNeural?
 - What certifications does ZigmaNeural have (for example ISO)?
 - Which industries does ZigmaNeural serve with its AI solutions?
 - What certifications does ZigmaNeural have (ISO, quality standards, etc.)?
@@ -55,6 +55,7 @@ Company basics
 
 [Click here to watch the ZigmaNeural Assistant in action!]https://www.youtube.com/watch?v=m_eIdxon-xI
 ---
+
 
 
 
