@@ -47,14 +47,18 @@ Company basics
 - What certifications does ZigmaNeural have (ISO, quality standards, etc.)?
 - What makes ZigmaNeural different from other AI companies?
 - What are some typical use cases of ZigmaNeural’s AI automation in e‑commerce/healthcare/finance/etc.?
-- How does ZigmaNeural use NLP and conversational AI for customer suppor
+- How does ZigmaNeural use NLP and conversational AI for customer support
   
 -----
 
 ## 🎥 Demo Video
 
-[Click here to watch the ZigmaNeural Assistant in action!]https://www.youtube.com/watch?v=m_eIdxon-xI
+Click here to watch the ZigmaNeural Assistant in action!
+https://www.youtube.com/watch?v=m_eIdxon-xI
+
+
 ---
+
 
 
 
